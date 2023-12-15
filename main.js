@@ -1,27 +1,27 @@
 function simuladorFutbol() {
     
-    const equipoLocal = "Boca Juniors";
-    const equipoVisitante = "River Plate";
+    const equiposLocales = ["Boca Juniors", "Independiente", "Rosario Central", "Estudiantes LP", "Banfield"];
+    const equiposVisitantes = ["River Plate", "Racing", "NOB", "Gimnasia LP","Lanús"];
 
-    let golesBoca = 0;
-    let golesRiver = 0;
+    let golesLocales = 0;
+    let golesVisitante = 0;
 
     
     for (let i = 0; i < 6; i++) {
-        const probabilidadGolBoca = 0.7;
-        const probabilidadGolRiver = 0.7;
+        const equipoesLocales = 0.7;
+        const equiposVisitantes = 0.7;
 
-        if (Math.random() < probabilidadGolBoca) {
-            golesBoca++;
+        if (Math.random() < probabilidadGolLocales) {
+            golesLocales++;
         }
 
-        if (Math.random() < probabilidadGolRiver) {
-            golesRiver++;
+        if (Math.random() < probabilidadGolVisitantes) {
+            golesVisitantes++;
         }
     }
 
     const resultadoHtml = `<h2>Resultado:</h2>
-                           <p>${equipoLocal} ${golesBoca} - ${golesRiver} ${equipoVisitante}</p>`;
+                           <p>${equiposLocales} ${golesLocales} - ${golesVisitante} ${equiposVisitantes}</p>`;
     
     document.getElementById("resultado").innerHTML = resultadoHtml;
 }
